@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.njumzc.gitlabtss.utils.RetrofitHelper;
+import com.njumzc.gitlabtss.api.form.LoginInform;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -22,5 +25,12 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("com.njumzc.gitlabtss", appContext.getPackageName());
+
+        //test login
+        LoginInform loginInform = new LoginInform();
+        loginInform.setUsername("nanguangtailang");
+        loginInform.setPassword("123");
+
+        RetrofitHelper.getAuthService().login(loginInform);
     }
 }

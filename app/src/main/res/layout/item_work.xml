@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPureWhite"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_work_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:text="考试名称"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:maxEms="6"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/item_work_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="详情>>"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/item_work_startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间:2017-04-25 16:22:47.0"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:layout_below="@+id/item_work_title"
+            android:layout_alignLeft="@+id/item_work_title"
+            android:layout_alignStart="@+id/item_work_title" />
+        <TextView
+            android:id="@+id/item_work_endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束时间:2017-04-25 16:22:47.0"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:layout_below="@+id/item_work_startTime"
+            android:layout_alignLeft="@+id/item_work_title"
+            android:layout_alignStart="@+id/item_work_title" />
+        <TextView
+            android:id="@+id/item_work_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/item_work_endTime"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:text="已结束"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</LinearLayout>

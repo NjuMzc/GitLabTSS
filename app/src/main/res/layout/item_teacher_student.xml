@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPureWhite"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/teacher_student_avatar"
+            android:layout_width="66dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/colorPureWhite" />
+
+        <TextView
+            android:id="@+id/item_student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/teacher_student_avatar"
+            android:text="马张驰"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/item_student_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_student_name"
+            android:layout_toEndOf="@+id/teacher_student_avatar"
+            android:layout_toRightOf="@+id/teacher_student_avatar"
+            android:text="141250091"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:layout_alignBottom="@+id/teacher_student_avatar" />
+        <TextView
+            android:id="@+id/item_student_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="详情>>"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPureWhite"
+    tools:context="com.njumzc.gitlabtss.features.teacher.TeacherMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/teacher_main_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/profile"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"/>
+        <TextView
+            android:id="@+id/teacher_main_username"
+            android:text="用户名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"/>
+        <Button
+            android:id="@+id/teacher_main_classes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="查看班级"
+            android:textSize="20dp"
+            android:layout_weight="0.20" />
+
+        <Button
+            android:id="@+id/teacher_main_homework"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看作业"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/teacher_main_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看练习"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/teacher_main_exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看考试"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/teacher_main_logout"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="?attr/colorControlHighlight"
+            android:text="退出登录"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>
