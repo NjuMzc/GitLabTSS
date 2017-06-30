@@ -22,7 +22,9 @@
         <activity android:name=".features.teacher.TeacherClassActivity" />
         <activity android:name=".features.teacher.TeacherStudentsActivity" />
         <activity android:name=".features.WorkListActivity" />
-        <activity android:name=".features.teacher.TeacherWorkDetailActivity"></activity>
+        <activity android:name=".features.teacher.TeacherWorkDetailActivity" />
+        <activity android:name=".features.student.StudentMainActivity" />
+        <activity android:name=".features.student.StudentAnalyseActivity"></activity>
     </application>
 
 </manifest>

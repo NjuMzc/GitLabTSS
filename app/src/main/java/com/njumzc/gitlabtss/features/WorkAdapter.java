@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.njumzc.gitlabtss.R;
 import com.njumzc.gitlabtss.api.vo.Work;
+import com.njumzc.gitlabtss.features.student.StudentAnalyseActivity;
 import com.njumzc.gitlabtss.features.teacher.TeacherWorkDetailActivity;
 import com.njumzc.gitlabtss.utils.ApplicationInform;
 
@@ -98,7 +99,7 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
                 if(userType.equals("teacher")){
                     intent = new Intent(activity, TeacherWorkDetailActivity.class);
                 }else{
-                    intent = new Intent(activity, TeacherWorkDetailActivity.class);
+                    intent = new Intent(activity, StudentAnalyseActivity.class);
                 }
                 ApplicationInform.setCurrentWork(work);
                 activity.startActivity(intent);

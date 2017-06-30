@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.njumzc.gitlabtss.R;
 import com.njumzc.gitlabtss.api.vo.Question;
+import com.njumzc.gitlabtss.utils.ApplicationInform;
 
 import org.w3c.dom.Text;
 
@@ -32,6 +33,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
         TextView difficultyTest;
         TextView gitUrlTest;
         TextView creatorText;
+        TextView readmeText;
         public QuestionViewHolder(View itemView) {
             super(itemView);
             nameText = (TextView) itemView.findViewById(R.id.item_question_title);
@@ -39,6 +41,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
             difficultyTest = (TextView) itemView.findViewById(R.id.item_question_difficulty);
             gitUrlTest = (TextView) itemView.findViewById(R.id.item_question_gitUrl);
             creatorText = (TextView) itemView.findViewById(R.id.item_question_creator);
+            readmeText = (TextView) itemView.findViewById(R.id.item_question_readme);
         }
     }
 
@@ -57,6 +60,11 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
         holder.difficultyTest.setText("难度系数:"+question.getDifficulty());
         holder.gitUrlTest.setText("gitUrl:"+question.getGitUrl());
         holder.creatorText.setText("创建者:"+question.getCreatorName());
+        if(ApplicationInform.getCurrentUser().getType().equals("student")){
+            holder.readmeText.setText("README:测试用的readme\\n");
+        }else{
+            holder.readmeText.setVisibility(View.GONE);
+        }
     }
 
     @Override

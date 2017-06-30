@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import com.njumzc.gitlabtss.R;
 import com.njumzc.gitlabtss.api.form.LoginInform;
 import com.njumzc.gitlabtss.api.vo.UserAccount;
+import com.njumzc.gitlabtss.features.student.StudentMainActivity;
 import com.njumzc.gitlabtss.features.teacher.TeacherMainActivity;
 import com.njumzc.gitlabtss.utils.ApplicationInform;
 import com.njumzc.gitlabtss.utils.RetrofitHelper;
@@ -66,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                             //跳转界面
                             if(userAccount.getType().equals("student")){
                                 //学生用户
+                                Intent intent = new Intent(getApplicationContext(), StudentMainActivity.class);
+                                startActivity(intent);
                             }else{
                                 //老师用户
                                 Intent intent = new Intent(getApplicationContext(), TeacherMainActivity.class);
